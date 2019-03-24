@@ -7,7 +7,7 @@ module ex_mem(
 
     output reg mem_write_reg_en_o,
     output reg [4:0] mem_write_reg_addr_o,
-    output reg [31:0] mem_write_reg_data_o,
+    output reg [31:0] mem_write_reg_data_o
 );
     always @ (posedge clk) begin
         if(rst == 1'b1) begin

@@ -9,7 +9,7 @@ module ex(
     
     output reg write_reg_en_o,
     output reg [4:0] write_reg_addr_o,
-    output reg [31:0] write_reg_data_o,
+    output reg [31:0] write_reg_data_o
 );
     reg [31:0] logic_result;
     always @ (*) begin

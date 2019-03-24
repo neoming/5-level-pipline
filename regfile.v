@@ -12,7 +12,7 @@ module reg_file(
     //read2
     input wire r2_en,
     input wire [4:0] r2_addr,
-    output wire [31:0] r2_data,
+    output reg [31:0] r2_data
 );
     reg [31:0] registers[0:31];
 
@@ -30,7 +30,7 @@ module reg_file(
         if(rst == 1'b1) begin
             r1_data <= 32'h00000000;
         end else if(r1_en == 1'b1) begin
-            if(r1_addr == w_addr)&&(w_en == 1'b1)) r1_data <= w_data;
+            if((r1_addr == w_addr)&&(w_en == 1'b1)) r1_data <= w_data;
             else if( r1_addr == 5'h0) r1_data <= 32'h00000000;
             else r1_data <= registers[r1_addr];
         end else begin
@@ -43,7 +43,7 @@ module reg_file(
         if(rst == 1'b1) begin
             r2_data <= 32'h00000000;
         end else if(r2_en == 1'b1) begin
-            if(r2_addr == w_addr)&&(w_en == 1'b1)) r2_data <= w_data;
+            if((r2_addr == w_addr)&&(w_en == 1'b1)) r2_data <= w_data;
             else if( r2_addr == 5'h0) r2_data <= 32'h00000000;
             else r2_data <= registers[r2_addr];
         end else begin

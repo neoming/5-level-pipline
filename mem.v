@@ -6,7 +6,7 @@ module mem(
     
     output reg write_reg_en_o,
     output reg write_reg_addr_o,
-    output reg write_reg_data_o,
+    output reg write_reg_data_o
 );
     always @ (*)begin
         if(rst == 1'b1) begin

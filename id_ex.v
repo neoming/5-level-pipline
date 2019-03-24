@@ -14,7 +14,7 @@ module id_ex(
     output reg [31:0] ex_op_number_1_o,
     output reg [31:0] ex_op_number_2_o,
     output reg ex_write_reg_en_o,
-    output reg [4:0] ex_write_reg_addr_o,
+    output reg [4:0] ex_write_reg_addr_o
 );
     always @ (posedge clk) begin
         if(rst == 1'b1) begin

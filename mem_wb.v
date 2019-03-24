@@ -7,7 +7,7 @@ module mem_wb(
 
     output wire wb_write_reg_en_o,
     output wire [4:0] wb_write_reg_addr_o,
-    output wire [31:0] wb_write_reg_data_o,
+    output wire [31:0] wb_write_reg_data_o
 );  
 
     always @ (posedge clk) begin

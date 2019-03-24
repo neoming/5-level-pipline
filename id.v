@@ -17,7 +17,7 @@ module id(
     output reg [31:0] op_number_1_o,//操作数1
     output reg [31:0] op_number_2_o,//操作数2
     output reg write_reg_en_o,//寄存器写使能信号
-    output reg [4:0] write_reg_addr_o,//寄存器写地址
+    output reg [4:0] write_reg_addr_o//寄存器写地址
 );
     //指令分析
     wire[5:0] op1 = inst_i[31:26];

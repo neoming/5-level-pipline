@@ -1,7 +1,7 @@
 module inst_ram(
     input wire ce,
     input wire[31:0] data_addr,
-    output wire[31:0] data,
+    output reg[31:0] data
 );
     reg[31:0] inst_mem[0:31]
 

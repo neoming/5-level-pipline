@@ -2,7 +2,7 @@ module inst_fetch(
     input wire rst,
     input wire clk,
     output reg [31:0] pc,
-    output reg inst_sram_en,
+    output reg inst_sram_en
 );
     always @ (posedge clk) begin
         if(rst == 1'b1) begin

@@ -7,7 +7,7 @@ module cpu(
     output wire         inst_sram_wen,
     output wire [31:0]  inst_sram_addr,
     output wire [31:0]  inst_sram_write_data,
-    output wire         inst_sram_en, 
+    output wire         inst_sram_en
 );
     //if if_id
     wire [31:0] pc;
