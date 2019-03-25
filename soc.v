@@ -19,8 +19,8 @@ module soc(
 	);
 	
 	inst_rom inst_rom0(
-		.addr(inst_addr),
-		.inst(inst),
+		.data_addr(inst_addr),
+		.data(inst),
 		.ce(inst_sram_ce)	
     );
 endmodule

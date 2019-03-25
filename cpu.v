@@ -185,7 +185,7 @@ module cpu(
         //read2
         .r2_en(reg_2_read),
         .r2_addr(reg_2_read_addr),
-        .r2_data(reg_2_read_data,
+        .r2_data(reg_2_read_data),
     );
 
 endmodule
