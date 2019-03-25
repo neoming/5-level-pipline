@@ -5,9 +5,9 @@ module mem_wb(
     input wire [4:0] mem_write_reg_addr_i,
     input wire [31:0] mem_write_reg_data_i,
 
-    output wire wb_write_reg_en_o,
-    output wire [4:0] wb_write_reg_addr_o,
-    output wire [31:0] wb_write_reg_data_o
+    output reg wb_write_reg_en_o,
+    output reg [4:0] wb_write_reg_addr_o,
+    output reg [31:0] wb_write_reg_data_o
 );  
 
     always @ (posedge clk) begin

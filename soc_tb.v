@@ -12,8 +12,8 @@ module soc_tb();
     end
       
     initial begin
-        rst = `RstEnable;
-        #195 rst= `RstDisable;
+        rst = 1'b1;
+        #195 rst= 1'b0;
         #1000 $stop;
     end
        

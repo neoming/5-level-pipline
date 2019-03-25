@@ -15,10 +15,10 @@ module soc(
 	
 		.inst_sram_en(inst_sram_ce),
 		.inst_sram_read_data(inst),
-		.inst_srame_addr(inst_addr)
+		.inst_sram_addr(inst_addr)
 	);
 	
-	inst_rom inst_rom0(
+	inst_ram inst_ram0(
 		.data_addr(inst_addr),
 		.data(inst),
 		.ce(inst_sram_ce)	

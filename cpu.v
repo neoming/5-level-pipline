@@ -28,7 +28,7 @@ module cpu(
     wire [31:0] ex_op_number_1_i;
     wire [31:0] ex_op_number_2_i;
     wire        ex_write_reg_en_i;
-    wire        ex_write_reg_addr_i;
+    wire [4:0]  ex_write_reg_addr_i;
 
     //ex ex_mem
     wire        ex_write_reg_en_o;
@@ -155,7 +155,7 @@ module cpu(
         
         .write_reg_en_o(mem_write_reg_en_o),
         .write_reg_addr_o(mem_write_reg_addr_o),
-        .write_reg_data_o(mem_write_reg_data_o),
+        .write_reg_data_o(mem_write_reg_data_o)
     );
 
     mem_wb mem_wb0(
@@ -168,10 +168,10 @@ module cpu(
 
         .wb_write_reg_en_o(wb_write_reg_en_i),
         .wb_write_reg_addr_o(wb_write_reg_addr_i),
-        .wb_write_reg_data_o(wb_write_reg_data_i),
+        .wb_write_reg_data_o(wb_write_reg_data_i)
     );
 
-    regfile regfile0(
+    reg_file regfile0(
         .rst(rst),
         .clk(clk),
         //write
@@ -185,7 +185,7 @@ module cpu(
         //read2
         .r2_en(reg_2_read),
         .r2_addr(reg_2_read_addr),
-        .r2_data(reg_2_read_data),
+        .r2_data(reg_2_read_data)
     );
 
 endmodule
